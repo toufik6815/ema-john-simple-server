@@ -29,7 +29,7 @@ const port = 5000;
 
 //ROOT
 app.get('/', (req, res) => {
-    res.send('Hello form db working')
+    res.send("Hello form db working")
 })
 
 
