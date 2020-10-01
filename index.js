@@ -81,12 +81,13 @@ client.connect((err) => {
 
 
     //POST-2
-    app.post('/productsByKeys', (req, res) => {
-        const productKeys = req.body;
-        productsCollection.find({key: { $in: productKeys}})
+    app.post("/productKeys", (req, res) => {
+      const productKeys = req.body;
+      productsCollection
+        .find({ key: { $in: productKeys } })
         .toArray((err, documents) => {
-            res.send(documents);
-        })
+          res.send(documents);
+        });
     });
 
 
